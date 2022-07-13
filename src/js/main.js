@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     document.body.addEventListener('click', (e) => {
         if(e.target != popup || e.target == popup.querySelector('.popup__close')) {
-            popup.style.display = 'none';
+            popup.classList.add('animated', 'fadeOut');
         }
     });
 
