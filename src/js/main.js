@@ -7,6 +7,14 @@ import ShowInfo from "./modules/showInfo";
 import Download from "./modules/download";
 
 window.addEventListener("DOMContentLoaded", () => {
+    const popup = document.querySelector('.popup');
+
+    document.body.addEventListener('click', (e) => {
+        if(e.target != popup || e.target == popup.querySelector('.popup__close')) {
+            popup.style.display = 'none';
+        }
+    });
+
     const slider = new MainSlider({btns: '.next',container: '.page'});
     slider.render();
 

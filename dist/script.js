@@ -110,6 +110,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 window.addEventListener("DOMContentLoaded", () => {
+  const popup = document.querySelector('.popup');
+  document.body.addEventListener('click', e => {
+    if (e.target != popup || e.target == popup.querySelector('.popup__close')) {
+      popup.style.display = 'none';
+    }
+  });
   const slider = new _modules_slider_slider_main__WEBPACK_IMPORTED_MODULE_0__["default"]({
     btns: '.next',
     container: '.page'
